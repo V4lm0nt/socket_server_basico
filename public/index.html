@@ -28,6 +28,17 @@
         socket.on('mensaje', (payload)=>{
             console.log('escuchando', payload)
         });
+        //recibir el mensaje    
+        socket.on('nuevo-mensaje', (payload)=>{
+           console.log(payload);
+        });
+        
+        socket.on('active-bands', (bands)=>{
+            console.clear()
+            console.table(bands);
+        });
+        
+        
       
     </script>
 
